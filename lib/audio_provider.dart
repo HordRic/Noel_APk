@@ -1,5 +1,5 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
 
 class AudioProvider with ChangeNotifier {
   final AudioPlayer _audioPlayer = AudioPlayer();
@@ -9,11 +9,16 @@ class AudioProvider with ChangeNotifier {
   }
 
   Future<void> _init() async {
-    await _audioPlayer.setAsset('assets/audio/christmas_music.mp3');
-    _audioPlayer.setLoopMode(LoopMode.all);
-    _audioPlayer.play();
+    try {
+      await _audioPlayer.setSource(AssetSource('audio/christmas_music.mp3'));
+      _audioPlayer.setReleaseMode(ReleaseMode.loop);
+      _audioPlayer.resume();
+    } catch (e) {
+      print("Error loading audio: $e");
+    }
   }
 
+  @override
   void dispose() {
     _audioPlayer.dispose();
     super.dispose();
