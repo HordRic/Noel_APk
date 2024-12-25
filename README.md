@@ -57,4 +57,4 @@ Voici quelques exemples de fonctionnalités que vous pouvez utiliser :
 
 1. Clonez le dépôt :
    ```sh
-   git clone https://github.com/HordRic/joyeux_noel.git
+   git clone https://github.com/HordRic/Noel_APK.git
