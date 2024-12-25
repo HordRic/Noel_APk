@@ -1,8 +1,7 @@
 import 'dart:math';
 
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:joyeux_noel/home_screen.dart';
+import 'package:joyeux_noel/video_screen.dart';
 
 class QuoteScreen extends StatefulWidget {
   final String name;
@@ -159,7 +158,7 @@ class _QuoteScreenState extends State<QuoteScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => HomeScreen(),
+                                  builder: (context) => VideoScreen(),
                                 ));
                           },
                           child: Text(
@@ -182,7 +181,13 @@ class _QuoteScreenState extends State<QuoteScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffc63023),
-        title: Text("Hey,${widget.name}!"),
+        title: Text(
+          "Hey, ${widget.name}!",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+          ),
+        ),
       ),
       body: Center(
         child: Column(

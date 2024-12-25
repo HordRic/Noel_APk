@@ -12,10 +12,13 @@ class AudioProvider with ChangeNotifier {
     try {
       await _audioPlayer.setSource(AssetSource('audio/christmas_music.mp3'));
       _audioPlayer.setReleaseMode(ReleaseMode.loop);
-      _audioPlayer.resume();
     } catch (e) {
       print("Error loading audio: $e");
     }
+  }
+
+  void play() {
+    _audioPlayer.resume();
   }
 
   @override
