@@ -22,7 +22,7 @@ Permet aux utilisateurs de saisir leur nom et de générer des citations de Noë
 Affiche des citations de Noël aléatoires et des animations de neige.
 
 ### 4. Écran de vidéo (VideoScreen)
-Lit une vidéo de Noël et redirige vers l'écran principal après 10 secondes.
+Lit une vidéo de Noël.
 
 ## Utilisation
 
